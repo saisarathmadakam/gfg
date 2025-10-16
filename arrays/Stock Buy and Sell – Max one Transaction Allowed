@@ -1,0 +1,14 @@
+// User function Template for Java
+
+class Solution {
+    public int maximumProfit(int prices[]) {
+        int minis = prices[0];
+        int res =0;
+        for(int i =1;i<prices.length;i++)
+        {
+            minis = Math.min(minis,prices[i]);
+            res=Math.max(res,prices[i]-minis);
+        }
+        return res;
+    }
+}
